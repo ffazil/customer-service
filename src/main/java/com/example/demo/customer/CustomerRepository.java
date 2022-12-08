@@ -1,7 +1,10 @@
 package com.example.demo.customer;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.demo.data.repository.AggregateRepository;
 
-public interface CustomerRepository extends JpaRepository<Customer, Integer> {
+import java.util.Optional;
 
+public interface CustomerRepository extends AggregateRepository<Customer> {
+
+    Optional<Customer> findByFirstname(String firstname);
 }

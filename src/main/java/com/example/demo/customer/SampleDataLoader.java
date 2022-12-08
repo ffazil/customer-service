@@ -18,7 +18,6 @@ public class SampleDataLoader implements ApplicationRunner {
         if(customerRepository.count() == 0){
             Customer suraj = new Customer("Suraj", "Mallenahalli");
             suraj = customerRepository.save(suraj);
-            log.info("Added customer: {}", suraj);
         }
     }
 }
